@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "seismic-harmony-236213",
+  "private_key_id": "ad643ea3cbbcb50a28f74b8f4dce3ff0463f16ce",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCShQFluAqP5+1G\ngu0gLjeZyjN01Dlidx0rlsQhaAs7Gh94enwLsSH2e4I+R69iH+8Nbm/456J7ZhVy\n0cXyuBs2lgD7I2nq/BJbg1v5R+9UzZcVoLiBjfy/XATQycwhAl9jWZ1xEshTDKv3\n8HjWTKEMFLDxfgJwJ14hzz7u4sUDE+CKL31B9ia5YlVOpCCYCHKQcU4MSUjje/jE\nKrlJfy99qrbbFG79xXaR71K3bKj3N3zw3sUyqeBJg9a0lsyklUzj7F+yfv0lqTFE\nWOjAZksN122XInrOaVXCeblXX39eSPSjVjefPlVYf81CTjDut53/6DajVxziUOrA\nsFVHjpWLAgMBAAECggEADhMfxL0uqo89cEoQbEh0R94wHjdqwcYuc6r6cTkU5xsF\nzeV6OAdOe2Z25vOs6dCmfpROxkq+BXuTcOGs0bmUx6QWOQm4WX3YZ5kRQzuBRpSv\nQEEdqDhTALDet43DAaLANgN8R8nlm3C6rkkX2oIm8Emmi7QumMZ3WOkXIwx+n2Jq\nqda5B8TwwGHRJ3noO7+ZBlXVvV/reGmeE4J1pe+VzOti7SxR34Zf/M8SbLCfkcN0\nm1fu5Qnl6gZXjqGI0rak8zPWbK8pAydJ5NTRzd+pCyygeyw8npm+dl3/mCGNApTr\ns4TDc9Nf7GjzaW91MbAIUE0Eg2ozRTyuKAfr1PwiKQKBgQDMr96ZJ2c9LNPAh2MK\n4sj7GZRLeWXhbqiWqIU0J29K8I8a1oWZXRbA/KztsAoWxVlAaJIxsYrlgESTnSyn\niYfcacLgl6vAaHKh/LlI+rMtWPbh5Pm18J8RIFm5Ol8aKvxDaf8zfmOlakkRZDLM\n2O5p0R9pLD96bzEuC2ZMaEgYgwKBgQC3QCSnacCku4VjvvoEGBvf5GCI26Zk5r4D\nyGK5GxlbnXetzk1dFe1KZ9sJpXGlmJrHu7zHWiH4aREA5EFxMr2WyfQUR5e85jCu\ni6VKjZW4J69WAd9Byu11z9U4keeQcO26/F2gDPoCOQplpPBSksccDjL2o+U0Jrfn\n8hlYWoywWQKBgB+RA9hEvmQt1J49guW74djvsfINz8t7YF6TsK9BYaWCAd/Ws5Xa\nSFcM4LJrUrL+TmxjdCBbzBrmtCy7sZZI3H3+hYJTgbZTpVIcAoshtp5IuRJPWL9Z\nU361qYCqYt5LQMo4v5W2aTGqeYhIFpmG3wXMrXZvz35XRZNfSLCB6JR3AoGAPpPc\n8H6glqCi0Ikq/7Lr8e0fOh0oGVTilpAbhnLGmg6QC/5jVOJkAgCtQAILaS1Pzd1C\nfiE9cIMQl2lbH7jgHVohy7sXCh7hiPmPHIJ1GkoTCh/hiaoupQiwG31Xwm+N/0in\nADzuM0wfTM6ictBExkPjC260mraOHtsB5LYnTSECgYAHHkm6gsckJ9/Qr1LRK3DC\nZG8Z2oo6FzKYaUiv8/2MhhIWV/KVsieMdu1HLRAnPQRS3QRsLeWd5lIaNrccWNXK\nwYQTkPS8eI++7zUxizwvRC6IbRwQgy1QZXW1ELzzgaDDyujRyq88khinQIEBr+hp\nlM5Cvotd0Nlo4XIKPifOzA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "arif-khan@seismic-harmony-236213.iam.gserviceaccount.com",
+  "client_id": "106250354462630137711",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/arif-khan%40seismic-harmony-236213.iam.gserviceaccount.com"
+}
