@@ -1,39 +1,45 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[1]:
 
 
 from google.cloud import vision
 import os
+import argparse
 
 
-# In[2]:
 
 
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="creds.json"
 
 
-# In[3]:
-
 
 client = vision.ImageAnnotatorClient()
 
 
-# In[4]:
+
 
 
 import cv2
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import numpy as np
 
-
-# In[29]:
 
 
 import io
 
-path = './Vin_number_internship/DSCN4423.JPG'
+
+ap = argparse.ArgumentParser()
+
+ap.add_argument("-i", "--image", type=str,
+	help="path to input image")
+
+
+args = vars(ap.parse_args())
+
+
+
+
+
+path = args['image']
 with io.open(path, 'rb') as image_file:
         content = image_file.read()
 image_data = cv2.imread(path)
@@ -42,27 +48,27 @@ image_data = cv2.imread(path)
 
 # ## Manual Preprocessing
 
-# In[30]:
+
 
 
 rectKernel = cv2.getStructuringElement(cv2.MORPH_RECT, (9, 3))
 sqKernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5))
 
 
-# In[31]:
+
 
 
 gray = cv2.cvtColor(image_data, cv2.COLOR_BGR2GRAY)
 # sobel = cv2.Sobel(gray,ddepth=cv2.CV_32F, dx=1, dy=0)
 tophat = cv2.morphologyEx(gray, cv2.MORPH_TOPHAT, rectKernel)
-plt.imshow(tophat)
+#plt.imshow(tophat)
 tophat=tophat.tobytes()
 # sobel = sobel.tobytes()
 
 
 # ~Creating Google Vision API Object for Image~
 
-# In[32]:
+
 
 
 im_object = vision.types.Image(content=content)
@@ -70,26 +76,14 @@ im_object = vision.types.Image(content=content)
 
 # ~Fetching Response from the API
 
-# In[33]:
+
 
 
 response = client.text_detection(image=im_object)
 texts = response.text_annotations
 
 
-# In[ ]:
 
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[49]:
 
 
 save_text = []
@@ -102,7 +96,7 @@ for text in texts:
 #         print('bounds: {}'.format(','.join(vertices)))
 
 
-# In[50]:
+
 
 
 def count_alpha_n_digs(text):
@@ -119,7 +113,7 @@ def count_alpha_n_digs(text):
 
 # ~Since Images are too noisy and result from OCR may generate spaces between VIN, therefore using bruteforce instead of regex for detecting favourble VIN text and not going for only 17 char length alphanumeric word.~
 
-# In[53]:
+
 
 
 possibles_matches = []
@@ -130,28 +124,23 @@ for ix in range(1,len(save_text)):
         if digs >0 and alps >0:
             possibles_matches=[]
             possibles_matches.append({'Text':tmp,'digits':digs,'alphas':digs})
-            print('VIN : '+tmp)
+            #print('VIN : '+tmp)
             break
-    if digs >=2 and alps >= 2:
+    if digs+alps > 5 and digs!=0 and alps!=0:
         possibles_matches.append({'Text':tmp,'digits':digs,'alpha':alps})
     
     
 
 
-# In[54]:
 
+if len(possibles_matches) == 0:
+	print(" NO Matches ")
+else:
 
-for match in possibles_matches:
-    print(match)
+	print('Possible Matches for VIN Number:')
+	for match in possibles_matches:
+   		print(match['Text'])
 
-
-# In[65]:
-
-
-
-
-
-# In[ ]:
 
 
 
