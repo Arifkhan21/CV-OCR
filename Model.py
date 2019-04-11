@@ -46,7 +46,7 @@ image_data = cv2.imread(path)
 # plt.imshow(image_data)
 
 
-# ## Manual Preprocessing
+# Manual Preprocessing
 
 
 
